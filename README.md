@@ -2,6 +2,7 @@
 
 ## Potential improvments
 
+
 Compiler Construction 2020
 Computer Laboratory 
 University of Cambridge 
@@ -19,21 +20,22 @@ intermediate interpreters.  However, I will
 not except changes in github unless all of the 
 code compiles... 
 
-) Write some interesting slang examples. Run the 
+1. Write some interesting slang examples. Run the 
   interpreters on them and try to understand 
   the verbose output. 
 
-) Add division to the arithmetic operations. How will 
+1. Add division to the arithmetic operations. How will 
   you handle division by zero? 
 
-) Modify lexer to handle nested comments. 
+3. Modify lexer to handle nested comments. 
 
-) Improve the concrete syntax of Slang 
+4. Improve the concrete syntax of Slang 
   by changing the parser.  Also see if you can make 
   some of the type annotations optional. 
 
-) Implement simple "tuple pattern matching" in the compiler. 
-  For example, instead of writing 
+5. Implement simple "tuple pattern matching" in the compiler. 
+  
+For example, instead of writing 
 
      let rev (p : int * int) : int * int  = (snd p, fst p) 
      in 
@@ -47,16 +49,16 @@ code compiles...
         rev (21, 17) 
      end 
 
-   Hint : treat this as syntax sugar -- eliminate in 
-   front end by translating the second rev into the first. 
-   Or better yet, intro let bindings for "snd p" and "fst p". 
+### Hint : treat this as syntax sugar -- eliminate in front end by translating the second rev into the first. Or better yet, intro let bindings for "snd p" and "fst p". 
 
-) Implement simple optimisations : 
+6. Implement simple optimisations : 
     --- peephole 
     --- inline expansion 
     --- constant folding 
 
-) The current compiler translates let-bindings as 
+7. Improve lets 
+
+The current compiler translates let-bindings as 
 
     let x = e1 in e2 end   --->    (fun x -> e2 end)e1 
 
@@ -83,7 +85,7 @@ code compiles...
   the runtime of this implementation with the 
   closure-based approach ... 
 
-) Add mutual recursion to Slang1.  Such as 
+8. Add mutual recursion to Slang1.  Such as 
 
     let g(x : int) : int = ... f(e) ... 
     and f(z :int) : int  = .... g(e') ... 
@@ -91,21 +93,21 @@ code compiles...
 
    This requires careful treatment of environments! 
 
-) Generate ARM assembler from Jargon Machine code. 
+9. Generate ARM assembler from Jargon Machine code. 
 
-) Generate RISC-V assembler from Jargon Machine code. 
+10. Generate RISC-V assembler from Jargon Machine code. 
 
-) Add objects to SLang 
+11. Add objects to SLang 
 
-) Implement a garbage collector for the Jargon VM.  
+12. Implement a garbage collector for the Jargon VM.  
 
-) Implement elimination of tail-recursion in the compiler. 
+13. Implement elimination of tail-recursion in the compiler. 
 
-) Implement Objects in Slang. 
+14. Implement Objects in Slang. 
 
-) Implement exceptions in Slang. 
+15. Implement exceptions in Slang. 
 
-) We have blurred the distinction between the defining 
+16. We have blurred the distinction between the defining 
   language (OCaml) and the defined language (Slang) 
   in several ways.  For example, Slang integers are 
   the ints supplied by OCaml on your machine. Now 
@@ -115,5 +117,6 @@ code compiles...
   to match this? Are there additional build-in functions 
   that you might want to add to such a language? 
 
-) Translate Jargon.listing into Java VM code. 
+17. Translate Jargon.listing into Java VM code. 
+     
      
